@@ -1,0 +1,1 @@
+# Tugas2_gemini_riri_salma_kayla_silvi_tresna_sabrina_sinta_rini_amel_12-3
