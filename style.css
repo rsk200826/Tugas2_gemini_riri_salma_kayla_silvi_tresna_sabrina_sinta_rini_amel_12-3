@@ -1,0 +1,234 @@
+/* Variabel Warna Tema Pink */
+:root {
+    --primary-pink: #E91E63; /* Pink tua untuk aksen & tombol */
+    --secondary-pink: #F8BBD0; /* Pink muda untuk latar */
+    --light-bg: #FFF0F5;      /* Latar belakang sangat muda (LavenderBlush) */
+    --text-color: #333;       /* Teks gelap agar mudah dibaca */
+    --white-color: #FFFFFF;
+    --footer-bg: #FCE4EC;     /* Pink lembut untuk footer */
+}
+
+/* Reset Dasar & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: var(--white-color);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-pink);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 a {
+    font-size: 1.8rem;
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-pink);
+}
+
+/* Bagian Hero */
+.hero {
+    background-color: var(--light-bg); /* Latar belakang pink sangat muda */
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: var(--primary-pink);
+    color: var(--white-color);
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 25px; /* Tombol bulat */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #c2185b; /* Pink yang sedikit lebih gelap */
+    transform: translateY(-2px);
+}
+
+/* Bagian Fitur */
+.features {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 5px solid var(--secondary-pink);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-item h3 {
+    color: var(--primary-pink);
+    margin-bottom: 0.5rem;
+}
+
+/* Info Program */
+.program-info {
+    background-color: var(--light-bg);
+    padding: 3rem 0;
+}
+
+.program-info h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.program-info p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.program-info ul {
+    list-style-type: '🌸'; /* Emoji sebagai bullet point */
+    margin-left: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.program-info li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+/* === GAYA GALERI FOTO BARU === */
+.gallery-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Membuat grid responsif: 2 kolom di hp, 5 di desktop */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden; /* Memastikan gambar tidak keluar dari kotak */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--footer-bg);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Menyamakan tinggi semua gambar */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+    background-color: var(--footer-bg); /* Latar pink sangat muda */
+}
+
+/* ================================ */
+
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg); /* Pink lembut untuk footer */
+    color: #555;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--secondary-pink);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
